@@ -43,7 +43,7 @@ The unicorn started as an image and became a looping animation through a few AI 
 **Art and animation: [ElevenLabs ElevenCreative](https://elevenlabs.io), Image & Video**
 1. **GPT Image 2** generated the original unicorn illustration.
 2. **Background Removal** cut the unicorn out of the scene.
-3. An image edit model placed the cutout on a flat chroma key green background, with no shadow.
+3. **GPT Image 2.5 Sunburst** placed the cutout on a flat chroma key green background, with no shadow.
 4. **Google Veo 3.1** animated a 4-second wing-flap loop from the green image, using the same image as the start and end frames for a seamless loop.
 
 **Code, conversion, and store assets: [Claude](https://claude.ai) by Anthropic**
