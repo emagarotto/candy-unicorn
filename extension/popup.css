@@ -1,0 +1,96 @@
+:root {
+  --pink: #ff4fa3;
+  --pink-deep: #d6337f;
+  --ink: #2b1a33;
+  --muted: #7a6684;
+  --line: #f1dbe9;
+  --bg: #fff8fc;
+  --card: #ffffff;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f6e9f1;
+    --muted: #b9a3c2;
+    --line: #3d2a45;
+    --bg: #1d1422;
+    --card: #271b2e;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  width: 320px;
+  margin: 0;
+  font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: linear-gradient(120deg, #ff9ad5, #b98cff 55%, #7ec8ff);
+  color: #2b1a33;
+}
+header img { width: 64px; height: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,.15)); }
+header div { flex: 1; }
+h1 { margin: 0; font-size: 16px; font-weight: 750; }
+header p { margin: 2px 0 0; font-size: 12px; opacity: .8; }
+
+main { padding: 4px 14px 0; }
+main.off { opacity: .45; pointer-events: none; }
+section { padding: 12px 0; border-bottom: 1px solid var(--line); }
+section:last-child { border-bottom: 0; }
+h2 { margin: 0 0 8px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+
+.row { margin: 8px 0; }
+.row label { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.row b { color: var(--pink-deep); font-weight: 650; }
+@media (prefers-color-scheme: dark) { .row b { color: var(--pink); } }
+input[type=range] { width: 100%; accent-color: var(--pink); }
+.check { display: flex; align-items: center; gap: 8px; margin: 6px 0; cursor: pointer; }
+.check input { accent-color: var(--pink); width: 16px; height: 16px; }
+.hint { color: var(--muted); margin-top: 8px; }
+
+.segmented { display: grid; grid-template-columns: 1fr 1fr; background: var(--line); border-radius: 9px; padding: 3px; }
+.segmented button {
+  border: 0; background: transparent; color: var(--ink); padding: 6px 0; border-radius: 7px;
+  font: inherit; font-weight: 600; cursor: pointer;
+}
+.segmented button[aria-checked=true] { background: var(--card); box-shadow: 0 1px 3px rgba(0,0,0,.12); color: var(--pink-deep); }
+
+.switch { position: relative; width: 40px; height: 24px; flex: none; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.switch span { position: absolute; inset: 0; background: rgba(255,255,255,.55); border-radius: 12px; cursor: pointer; transition: background .15s; }
+.switch span::after { content: ""; position: absolute; left: 3px; top: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.25); transition: transform .15s; }
+.switch input:checked + span { background: var(--pink-deep); }
+.switch input:checked + span::after { transform: translateX(16px); }
+.switch input:focus-visible + span { outline: 2px solid #fff; outline-offset: 2px; }
+
+.sites { display: flex; flex-wrap: wrap; gap: 6px; }
+.sites:empty::before { content: "None yet"; color: var(--muted); }
+.chip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 4px 3px 9px; border-radius: 12px; background: var(--line); font-size: 12px; }
+.chip button { border: 0; background: transparent; color: var(--muted); cursor: pointer; font-size: 14px; line-height: 1; padding: 0 4px; }
+.link { margin-top: 8px; border: 0; background: none; color: var(--pink-deep); font: inherit; font-weight: 600; padding: 0; cursor: pointer; }
+.link:disabled { color: var(--muted); cursor: default; }
+
+.perm { margin: 12px 14px 0; padding: 10px 12px; border-radius: 10px; background: var(--card); border: 1px solid var(--line); }
+.perm p { margin: 0 0 8px; }
+.secondary {
+  width: 100%; border: 1.5px solid var(--pink); border-radius: 8px; padding: 7px; cursor: pointer;
+  background: transparent; color: var(--pink-deep); font: inherit; font-weight: 700;
+}
+@media (prefers-color-scheme: dark) { .secondary { color: var(--pink); } }
+.revoke { display: block; margin-top: 8px; }
+
+footer { padding: 10px 14px 14px; }
+.primary {
+  width: 100%; border: 0; border-radius: 10px; padding: 10px; cursor: pointer;
+  font: inherit; font-weight: 700; font-size: 14px; color: #fff;
+  background: linear-gradient(120deg, var(--pink), #9b5cff);
+}
+.primary:active { transform: translateY(1px); }
+#status { margin: 6px 0 0; min-height: 16px; text-align: center; color: var(--muted); font-size: 12px; }

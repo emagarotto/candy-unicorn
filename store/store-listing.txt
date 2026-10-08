@@ -1,0 +1,91 @@
+CANDY UNICORN: CHROME WEB STORE ANSWERS
+Copy each answer into the matching field in the Developer Dashboard.
+
+==================================================
+STORE LISTING TAB
+==================================================
+
+Name (from the package):
+Candy Unicorn
+
+Summary (from the package, 87 characters):
+A glitter unicorn flies across your screen at random times, with candy fireworks.
+
+Description:
+A glitter unicorn flaps across your screen while candy fireworks burst behind it. Peppermints, wrapped candies, jellybeans, stars, and hearts rain down, then the page goes back to normal.
+
+You set the rules:
+- How often: random, or every 1 to 60 minutes
+- Unicorn size and flight speed
+- Sparkle trail on or off
+- 1 to 50 candy fireworks per flight
+- Skip any site with one click
+- Fly now button for an instant show
+- Random flights are opt-in: turn them on in settings when you want them
+
+Built to stay out of your way:
+- The unicorn never blocks clicks. Links and buttons keep working mid-flight.
+- Flies only in the tab you're looking at.
+- Scheduled flights pause when your computer has reduce motion turned on.
+- No accounts, no tracking, no data collected. Your settings stay in your Chrome profile.
+
+Category:
+Fun
+
+Language:
+English (United States)
+
+Graphic assets:
+Store icon (128x128): icons/icon128.png from the extension folder
+Screenshots (1280x800): screenshot-1-flight.png, screenshot-2-fireworks.png, screenshot-3-settings.png
+Small promo tile (440x280): promo-tile-440x280.png
+
+Official URL: leave blank
+Homepage URL: https://magarottos.com (optional)
+Support URL: leave blank, or a support email page
+
+==================================================
+PRIVACY TAB
+==================================================
+
+Single purpose description:
+Candy Unicorn shows a decorative animated unicorn with candy fireworks across the web page you're viewing, at times the user chooses.
+
+Permission justifications:
+
+activeTab:
+When the user clicks the toolbar icon and presses Fly now, the extension shows the unicorn animation on the current tab only.
+
+storage:
+Saves the user's settings, such as how often the unicorn appears, its size and speed, firework count, and skipped sites.
+
+alarms:
+Schedules the next unicorn flight at the random or fixed interval the user picks.
+
+scripting:
+Adds the unicorn animation layer to the current tab when the user presses Fly now, or when a scheduled flight starts after the user has turned on random flights.
+
+Optional host permission (<all_urls>), requested at runtime only:
+Not granted at install. Users who want the unicorn to fly in on its own press "Allow random flights" in the settings, and Chrome asks them to approve. The extension then draws a temporary animation layer on the page they are viewing. It does not read, collect, change, or send page content. Users turn this off at any time from the same settings panel.
+
+Are you using remote code?
+No, I am not using remote code. All JavaScript ships inside the package.
+
+Data usage:
+Check none of the data types. Candy Unicorn collects no user data.
+
+Certifications (check all three):
+- I do not sell or transfer user data to third parties, outside of the approved use cases
+- I do not use or transfer user data for purposes unrelated to my item's single purpose
+- I do not use or transfer user data to determine creditworthiness or for lending purposes
+
+Privacy policy URL:
+Not required when no user data is collected. Leave blank unless the dashboard asks for one.
+
+==================================================
+DISTRIBUTION TAB
+==================================================
+
+Payments: Free
+Visibility: Public (or Unlisted to test with a private link first)
+Regions: All regions

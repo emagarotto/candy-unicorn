@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Candy Unicorn</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/unicorn-still.webp" alt="">
+    <div>
+      <h1>Candy Unicorn</h1>
+      <p id="nextNote">Flies in at random</p>
+    </div>
+    <label class="switch" title="Turn the unicorn on or off">
+      <input type="checkbox" id="enabled">
+      <span></span>
+    </label>
+  </header>
+
+  <div id="permBox" class="perm" hidden>
+    <p><b>Random flights are off.</b> To fly in on its own, Candy Unicorn needs permission to show on the websites you visit. It never reads page content.</p>
+    <button type="button" id="allowAll" class="secondary">Allow random flights</button>
+  </div>
+
+  <main id="settings">
+    <section>
+      <h2>How often</h2>
+      <div class="segmented" role="radiogroup">
+        <button type="button" data-mode="random" role="radio">Random</button>
+        <button type="button" data-mode="fixed" role="radio">Set time</button>
+      </div>
+      <div id="randomRow" class="hint">Any time between 2 and 15 minutes</div>
+      <div id="fixedRow" class="row">
+        <label for="everyMinutes">Every <b id="everyLabel">5 min</b></label>
+        <input type="range" id="everyMinutes" min="1" max="60" step="1">
+      </div>
+      <button type="button" id="revoke" class="link revoke" hidden>Turn off random flights on all sites</button>
+    </section>
+
+    <section>
+      <h2>Unicorn</h2>
+      <div class="row">
+        <label for="size">Size <b id="sizeLabel">240 px</b></label>
+        <input type="range" id="size" min="120" max="360" step="10">
+      </div>
+      <div class="row">
+        <label for="speedUi">Speed <b id="speedLabel">7 sec</b></label>
+        <input type="range" id="speedUi" min="3" max="14" step="1">
+      </div>
+      <label class="check"><input type="checkbox" id="trail"> Sparkle trail</label>
+    </section>
+
+    <section>
+      <h2>Candy fireworks</h2>
+      <label class="check"><input type="checkbox" id="fireworks"> Fireworks during each flight</label>
+      <div class="row" id="countRow">
+        <label for="fireworkCount">Fireworks <b id="countLabel">23</b></label>
+        <input type="range" id="fireworkCount" min="1" max="50" step="1">
+      </div>
+    </section>
+
+    <section>
+      <h2>Skip these sites</h2>
+      <div id="siteList" class="sites"></div>
+      <button type="button" id="skipThis" class="link">Skip this site</button>
+    </section>
+  </main>
+
+  <footer>
+    <button type="button" id="flyNow" class="primary">Fly now</button>
+    <p id="status" role="status"></p>
+  </footer>
+
+  <script src="defaults.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
