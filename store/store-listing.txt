@@ -29,6 +29,9 @@ Built to stay out of your way:
 - Scheduled flights pause when your computer has reduce motion turned on.
 - No accounts, no tracking, no data collected. Your settings stay in your Chrome profile.
 
+About the "Proceed with caution" notice:
+New extensions show a "Proceed with caution" notice to Enhanced Safe Browsing users until they build a track record in the Chrome Web Store. Candy Unicorn collects no data, and its full source code is open for anyone to review on GitHub: https://github.com/emagarotto/candy-unicorn
+
 Category:
 Fun
 
@@ -41,7 +44,7 @@ Screenshots (1280x800): screenshot-1-flight.png, screenshot-2-fireworks.png, scr
 Small promo tile (440x280): promo-tile-440x280.png
 
 Official URL: leave blank
-Homepage URL: https://magarottos.com (optional)
+Homepage URL: https://github.com/emagarotto/candy-unicorn
 Support URL: leave blank, or a support email page
 
 ==================================================
