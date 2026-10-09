@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Candy Unicorn",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A glitter unicorn flies across your screen at random times, with candy fireworks.",
   "permissions": [
     "storage",

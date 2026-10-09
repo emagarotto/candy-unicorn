@@ -58,7 +58,7 @@ The unicorn started as an image and became a looping animation through a few AI 
 
 ```
 extension/   The Chrome extension (load this folder unpacked)
-  manifest.json      Manifest V3 config, version 1.0.1
+  manifest.json      Manifest V3 config, version 1.0.2
   background.js      Schedules flights and injects the animation
   content.js         Unicorn flight, sparkle trail, and candy fireworks
   defaults.js        Default settings
